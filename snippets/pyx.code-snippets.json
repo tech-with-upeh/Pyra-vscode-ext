@@ -1,0 +1,14 @@
+{
+  "App Block": {
+    "prefix": "app",
+    "body": [
+      "app() {",
+      "\tpage() {",
+      "\t\t#write page code here",
+      "\t\t$0",
+      "\t}",
+      "}"
+    ],
+    "description": "Insert app() block"
+  }
+}

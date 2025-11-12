@@ -1,0 +1,61 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "Pyra",
+	"patterns": [
+		{
+  "name": "variable.other.assignment.pyx",
+  "match": "\\b([A-Za-z_][A-Za-z0-9_]*)\\b(?=\\s*=)"
+},
+		{
+      "name": "constant.numeric.pyx",
+      "match": "\\b[0-9]+(\\.[0-9]+)?\\b"
+    },
+    {
+      "name": "variable.language.pyx",
+      "match": "\\b(window|app|page|view|text|img)\\b"
+    },
+		{
+      "name": "comment.line.number-sign.pyx",
+      "match": "#.*$"
+    },
+	{
+  "name": "comment.block.pyx",
+  "begin": "/\\*",
+  "end": "\\*/"
+},
+{
+  "name": "variable.other.readwrite.pyx",
+  "match": "\\b([A-Za-z_][A-Za-z0-9_]*)\\b(?!\\s*=)"
+},
+		{ "include": "#keywords" },
+		{
+			"include": "#strings"
+		}
+	],
+	"repository": {
+		"keywords": {
+			"patterns": [{
+				"name": "keyword.control.pyx",
+				"match": "\\b(if|while|for|return|print)\\b"
+			}]
+		},
+		"strings": {
+  "name": "string.quoted.pyx",
+  "begin": "(['\"])",
+  "beginCaptures": {
+    "1": { "name": "punctuation.definition.string.begin.pyx" }
+  },
+  "end": "\\1",
+  "endCaptures": {
+    "1": { "name": "punctuation.definition.string.end.pyx" }
+  },
+  "patterns": [
+    {
+      "name": "constant.character.escape.pyx",
+      "match": "\\\\."
+    }
+  ]
+}
+	},
+	"scopeName": "source.pyx"
+}
