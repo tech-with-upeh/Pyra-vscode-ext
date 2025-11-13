@@ -1,0 +1,40 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+
+    {
+      "type": "extensionHost",
+      "request": "launch",
+      "name": "Run Extension",
+      "runtimeExecutable": "${execPath}",
+      "args": [
+        "--extensionDevelopmentPath=${workspaceFolder}"
+      ],
+      "outFiles": [
+        "${workspaceFolder}/out/**/*.js"
+      ],
+      "preLaunchTask": "npm: compile"
+    },
+    {
+      "type": "extensionHost",
+      "request": "launch",
+      "name": "Run Extension Tests",
+      "runtimeExecutable": "${execPath}",
+      "args": [
+        "--extensionDevelopmentPath=${workspaceFolder}",
+        "--extensionTestsPath=${workspaceFolder}/out/test"
+      ],
+      "outFiles": [
+        "${workspaceFolder}/out/test/**/*.js",
+        "${workspaceFolder}/out/**/*.js"
+      ],
+      "preLaunchTask": "npm: compile"
+    },
+    {
+            "name": "Run Shell Script Directly",
+            "type": "node-terminal", // Can often be used for generic shell commands
+            "request": "launch",
+            "command": "./your_script.sh",
+    }
+  ]
+}
