@@ -6,7 +6,7 @@
   "engines": {
     "vscode": "^1.105.0"
   },
-  "categories": [ 
+  "categories": [
     "Other"
   ],
   "activationEvents": [],
@@ -16,25 +16,62 @@
       {
         "command": "pyra-lang.helloWorld",
         "title": "Hello World"
+      },
+      {
+        "command": "pyra-lang.build",
+        "title": "Pyra build"
+      },
+      {
+        "command": "pyra-lang.run",
+        "title": "Pyra run"
+      },
+      {
+        "command": "pyra-lang.dev",
+        "title": "Pyra dev"
+      },
+      {
+        "command": "pyra-lang.createproject",
+        "title": "Pyra createproject"
+      },
+      {
+        "command": "pyra-lang.run.t",
+        "title": "Pyra Run Target"
+      },
+      {
+        "command": "pyra-lang.dev.t",
+        "title": "Pyra Dev Target"
+      },
+      {
+        "command": "pyra-lang.build.t",
+        "title": "Pyra Build Target"
       }
     ],
-    "languages": [{
-      "id": "pyx",
-      "aliases": ["Pyra", "pyx"],
-      "extensions": [".pyx"],
-      "configuration": "./language-configuration.json"
-    }],
-    "grammars": [{
-      "language": "pyx",
-      "scopeName": "source.pyx",
-      "path": "./syntaxes/pyx.tmLanguage.json"
-    }],
+    "languages": [
+      {
+        "id": "pyx",
+        "aliases": [
+          "Pyra",
+          "pyx"
+        ],
+        "extensions": [
+          ".pyx"
+        ],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "pyx",
+        "scopeName": "source.pyx",
+        "path": "./syntaxes/pyx.tmLanguage.json"
+      }
+    ],
     "snippets": [
-    {
-      "language": "pyx",
-      "path": "./snippets/pyx.code-snippets.json"
-    }
-  ]
+      {
+        "language": "pyx",
+        "path": "./snippets/pyx.code-snippets.json"
+      }
+    ]
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",
@@ -45,13 +82,14 @@
     "test": "vscode-test"
   },
   "devDependencies": {
-    "@types/vscode": "^1.105.0",
     "@types/mocha": "^10.0.10",
-    "@types/node": "22.x",
-    "typescript-eslint": "^8.46.3",
+    "@types/node": "^22.19.1",
+    "@types/vscode": "^1.105.0",
+    "@vscode/test-cli": "^0.0.12",
+    "@vscode/test-electron": "^2.5.2",
     "eslint": "^9.39.1",
     "typescript": "^5.9.3",
-    "@vscode/test-cli": "^0.0.12",
-    "@vscode/test-electron": "^2.5.2"
+    "typescript-eslint": "^8.46.3",
+    "vscode": "^1.1.37"
   }
 }
