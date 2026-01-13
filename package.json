@@ -1,6 +1,6 @@
 {
-  "name": "pyra-lang",
-  "displayName": "Pyra Lang",
+  "name": "Helios-lang",
+  "displayName": "Helios Lang",
   "description": "for full stack framewotk built in c++",
   "version": "0.0.1",
   "engines": {
@@ -14,64 +14,71 @@
   "contributes": {
     "commands": [
       {
-        "command": "pyra-lang.helloWorld",
+        "command": "Helios-lang.helloWorld",
         "title": "Hello World"
       },
       {
-        "command": "pyra-lang.build",
-        "title": "Pyra build"
+        "command": "Helios-lang.build",
+        "title": "Helios build"
       },
       {
-        "command": "pyra-lang.run",
-        "title": "Pyra run"
+        "command": "Helios-lang.run",
+        "title": "Helios run"
       },
       {
-        "command": "pyra-lang.dev",
-        "title": "Pyra dev"
+        "command": "Helios-lang.dev",
+        "title": "Helios dev"
       },
       {
-        "command": "pyra-lang.createproject",
-        "title": "Pyra createproject"
+        "command": "Helios-lang.createproject",
+        "title": "Helios createproject"
       },
       {
-        "command": "pyra-lang.run.t",
-        "title": "Pyra Run Target"
+        "command": "Helios-lang.run.t",
+        "title": "Helios Run Target"
       },
       {
-        "command": "pyra-lang.dev.t",
-        "title": "Pyra Dev Target"
+        "command": "Helios-lang.dev.t",
+        "title": "Helios Dev Target"
       },
       {
-        "command": "pyra-lang.build.t",
-        "title": "Pyra Build Target"
+        "command": "Helios-lang.build.t",
+        "title": "Helios Build Target"
       }
     ],
     "languages": [
       {
-        "id": "pyx",
+        "id": "ink",
         "aliases": [
-          "Pyra",
-          "pyx"
+          "Helios",
+          "ink"
         ],
         "extensions": [
-          ".pyx"
+          ".ink"
         ],
         "configuration": "./language-configuration.json"
       }
     ],
     "grammars": [
       {
-        "language": "pyx",
-        "scopeName": "source.pyx",
-        "path": "./syntaxes/pyx.tmLanguage.json"
+        "language": "ink",
+        "scopeName": "source.ink",
+        "path": "./syntaxes/ink.tmLanguage.json"
       }
     ],
     "snippets": [
       {
-        "language": "pyx",
-        "path": "./snippets/pyx.code-snippets.json"
+        "language": "ink",
+        "path": "./snippets/ink.code-snippets.json"
       }
-    ]
+    ],
+    "iconThemes": [
+    {
+      "id": "helios-icon",
+      "label": "Helios Custom Icon Theme",
+      "path": "./fileicons/helios-icon-theme.json"
+    }
+  ]
   },
   "scripts": {
     "vscode:prepublish": "npm run compile",

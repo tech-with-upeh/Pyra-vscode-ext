@@ -1,30 +1,30 @@
 {
 	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
-	"name": "Pyra",
+	"name": "Helios",
 	"patterns": [
 		{
-  "name": "variable.other.assignment.pyx",
+  "name": "variable.other.assignment.ink",
   "match": "\\b([A-Za-z_][A-Za-z0-9_]*)\\b(?=\\s*=)"
 },
 		{
-      "name": "constant.numeric.pyx",
+      "name": "constant.numeric.ink",
       "match": "\\b[0-9]+(\\.[0-9]+)?\\b"
     },
     {
-      "name": "variable.language.pyx",
+      "name": "variable.language.ink",
       "match": "\\b(window|app|page|view|text|img)\\b"
     },
 		{
-      "name": "comment.line.number-sign.pyx",
+      "name": "comment.line.number-sign.ink",
       "match": "#.*$"
     },
 	{
-  "name": "comment.block.pyx",
+  "name": "comment.block.ink",
   "begin": "/\\*",
   "end": "\\*/"
 },
 {
-  "name": "variable.other.readwrite.pyx",
+  "name": "variable.other.readwrite.ink",
   "match": "\\b([A-Za-z_][A-Za-z0-9_]*)\\b(?!\\s*=)"
 },
 		{ "include": "#keywords" },
@@ -35,27 +35,27 @@
 	"repository": {
 		"keywords": {
 			"patterns": [{
-				"name": "keyword.control.pyx",
+				"name": "keyword.control.ink",
 				"match": "\\b(if|while|for|return|print)\\b"
 			}]
 		},
 		"strings": {
-  "name": "string.quoted.pyx",
+  "name": "string.quoted.ink",
   "begin": "(['\"])",
   "beginCaptures": {
-    "1": { "name": "punctuation.definition.string.begin.pyx" }
+    "1": { "name": "punctuation.definition.string.begin.ink" }
   },
   "end": "\\1",
   "endCaptures": {
-    "1": { "name": "punctuation.definition.string.end.pyx" }
+    "1": { "name": "punctuation.definition.string.end.ink" }
   },
   "patterns": [
     {
-      "name": "constant.character.escape.pyx",
+      "name": "constant.character.escape.ink",
       "match": "\\\\."
     }
   ]
 }
 	},
-	"scopeName": "source.pyx"
+	"scopeName": "source.ink"
 }

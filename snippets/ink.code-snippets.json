@@ -1,0 +1,12 @@
+{
+  "Page Block": {
+    "prefix": "page",
+    "body": [
+      "page($0) {",
+      "\t\t#write page code here",
+      "\t\t$0",
+      "}"
+    ],
+    "description": "Insert Page() block"
+  }
+}

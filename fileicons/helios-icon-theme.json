@@ -1,0 +1,13 @@
+{
+  "iconDefinitions": {
+    "helios_icon": {
+      "iconPath": "./helios.png"
+    }
+  },
+  "fileExtensions": {
+    "ink": "helios_icon"
+  },
+  "languageIds": {
+    "helios": "helios_icon"
+  }
+}
